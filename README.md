@@ -1,1 +1,1 @@
-# TIW-Project---Image-Gallery---pure-HTML
+# TIW-Project - Image-Gallery - pure-HTML
