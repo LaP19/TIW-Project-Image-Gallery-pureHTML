@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Registration Page</title>
+<link rel="stylesheet" type="text/css" th:href="@{/Style/indexStyle.css}"/>
+</head>
+<body>
+
+	<div class = login_back_margin><a href="index.html" class = "login_back">Login Page</a></div>	
+
+	<h1 class = "title">Please fill this registration form</h1>
+	
+	<form class = "registration" th:action = "@{/Registration}" method = "POST">
+		Name: <input type="text" name="name" required style="margin-right:35%; margin-bottom: 7%;"/><br>
+		Surname: <input type="text" name="surname" required style="margin-right:29.5%; margin-bottom: 5%;"/><br>
+
+		<p style = "margin-left:24%;" class = "errorMessage" th:text="${errorMsgFormatEmail}"></p>
+
+		<p style = "margin-left:24%; margin-bottom: 5px;" class = "errorMessage" th:text="${errorMsgEmail}"></p>
+		
+		Email: <input type="email" name="email" required style="margin-right:35.5%; margin-bottom: 5%;"/><br>
+
+		<p style = "margin-left:24%;" class = "errorMessage" th:text="${errorMsgUsername}"></p>
+		
+		Username: <input type="text" name="registrationUsername" required style="margin-right:27%; margin-bottom: 5%;"/><br>
+
+		<p style = "margin-left: 24%;" class = "errorMessage" th:text="${errorMsgPassword}"></p>
+		
+		Password: <input type="password" name="registrationPassword" required style="margin-right:28%; margin-bottom: 7%;"/><br>
+		Repeat Password: <input type="password" name="repeatedPassword" required style="margin-right:14%;"/><br>
+		
+		<div style="margin-right: 40%;"><input type = "submit" value = "Register"></div>
+	</form>	
+
+</body>
+</html>
