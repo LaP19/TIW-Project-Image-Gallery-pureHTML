@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Login page</title>
+<link rel="stylesheet" type="text/css" href="Style/indexStyle.css"/>
+</head>
+
+<body>
+
+	<h1 class = "welcome">Welcome to your Image Gallery application!</h1>
+	<h2 class = "title">Please login here:</h2>
+	
+	<form class = "login" action="CheckLogin" method="POST">
+		
+		<p style = "color: red; font-size: 70%; text-align: center; margin-bottom: 30px;" th:text = "${errorMsg}"></p>
+		
+		Username: <input type="text" name="loginUsername" required/> <br><br>
+		Password: <input type="password" name="loginPassword" required/><br><br> 
+		
+		<input type="submit" value="Login">
+		
+	</form>
+
+	<br>
+	
+	<h2 class = "title">If you don't have an account, please register here:</h2>
+	<div style = "margin-bottom: 40px;"><a class= "register" href="GoToRegistration">Create an account</a></div>
+			
+</body>
+</html>
